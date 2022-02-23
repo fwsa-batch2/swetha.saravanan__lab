@@ -145,15 +145,15 @@ mysql> select*from Nonclustered;
 11 rows in set (0.00 sec)
 
 mysql> show index from Nonclustered;
-+--------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+
 | Table        | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
-+--------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| ------------ |----------- |--------- |------------- |------------ |---------- |-------------|--------- |------- |----- |----------- |-------- |-------------- |-------- |----------- |
 | Nonclustered |          1 | nc_name  |            1 | stud_Name   | A         |          11 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 | Nonclustered |          1 | nc_id    |            1 | stud_Name   | A         |          11 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 | Nonclustered |          1 | nc_xid   |            1 | stud_id     | A         |          11 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 | Nonclustered |          1 | nc_xid   |            2 | stud_Name   | A         |          11 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 | Nonclustered |          1 | nc_xid   |            3 | stud_Age    | A         |          11 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
-+--------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+
 5 rows in set (0.02 sec)
 
 mysql> alter table Nonclustered
@@ -166,13 +166,13 @@ Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> show index from Nonclustered;
-+--------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+
 | Table        | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
-+--------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| ------------ |----------- |--------- |------------- |------------ |---------- |------------|--------- |------- |----- |----------- |-------- |-------------- |-------- |----------- |
 | Nonclustered |          1 | nc_xid   |            1 | stud_id     | A         |          11 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 | Nonclustered |          1 | nc_xid   |            2 | stud_Name   | A         |          11 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 | Nonclustered |          1 | nc_xid   |            3 | stud_Age    | A         |          11 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
-+--------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+
 3 rows in set (0.00 sec)
 
 mysql> 
