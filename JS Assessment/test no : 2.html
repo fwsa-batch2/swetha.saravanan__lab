@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        function reversedNumber(num) {
+            return (
+                parseFloat(
+                    num
+                        .toString()
+                        .split('')
+                        .reverse()
+                        .join('')
+                ) * Math.sign(num)
+            )
+        }
+         result=reversedNumber(32243);
+         document.write("Reverse of the Number is" , result);
+        
+    </script>
+
+</body>
+
+</html>

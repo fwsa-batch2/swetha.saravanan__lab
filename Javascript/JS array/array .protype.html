@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            document.write(`Property name : at ,This property is used to return the value of index. <br>`)
+            let a =[1,2,3,4];
+            let index = 1;
+            document.write(`Index of ${index} is ${a.at(index)} <br>` );
+            document.write(`Property name : concat, This property is used to merge two more arrays. <br>`);
+            let b =[1,2,3];
+            let c =[2,3,4];
+            let d = b.concat(c);
+            document.write(d ,'<br>');
+            document.write(`Property name : copywithin , This property return the same elements that you indicated in the condition <br>`)
+            document.write(c.copyWithin(0,1),'<br>');
+            document.write(`Property name : entries, This property returns the values in pair <br>`);
+            let iterator1=c.entries();
+            document.write(iterator1.next.value);
+        </script>
+    </body>
+</html>
