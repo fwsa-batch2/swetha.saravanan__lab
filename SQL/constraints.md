@@ -1,18 +1,7 @@
- sudo -u root mysql;
-[sudo] password for swetham: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 8
-Server version: 8.0.28-0ubuntu0.20.04.3 (Ubuntu)
-
-Copyright (c) 2000, 2022, Oracle and/or its affiliates.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-mysql> show databases;
+## SQL CONSTRAINTS
+```Syntax
+show databases;
+```
 
 | Database           |
 |------------------- |
@@ -24,13 +13,16 @@ mysql> show databases;
 | sys                |
 
 6 rows in set (0.01 sec)
-
-mysql> use blazers;
+```Using database
+use blazers;
+```
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
 Database changed
-mysql> show tables;
+```Display tables
+show tables;
+```
 
 | Tables_in_blazers |
 | ------------------|
@@ -41,8 +33,9 @@ mysql> show tables;
 
 4 rows in set (0.00 sec)
 
-
-mysql>  create table constraints(traveller_id int primary key auto_increment,Name varchar(20) not null, Age int not null,Phone bigint unique key not null,destination varchar(20) not null);
+```Creating table
+create table constraints(traveller_id int primary key auto_increment,Name varchar(20) not null, Age int not null,Phone bigint unique key not null,destination varchar(20) not null);
+```
 Query OK, 0 rows affected (0.06 sec)
 
 mysql> insert into constraints values('Shravani',20,9988770064,'Switzerland');
@@ -71,8 +64,9 @@ Query OK, 1 row affected (0.02 sec)
 mysql> insert into constraints(Name,Age,Phone,destination) values('Gardener',19,9384170764,'China'),('Tulsa',19,9988773322,'California');
 Query OK, 2 rows affected (0.00 sec)
 Records: 2  Duplicates: 0  Warnings: 0
-
-mysql> select*from constraints;
+```Extract data from tables
+select*from constraints;
+```
 
 | traveller_id | Name     | Age | Phone      | destination |
 |--------------|----------|-----|------------|-------------|
@@ -88,12 +82,14 @@ mysql> select*from constraints;
 |           10 | Tulsa    |  19 | 9988773322 | California  |
 
 10 rows in set (0.00 sec)
-
-mysql> create table foreign_key(Passport_no varchar(10) not null,travel_id int, foreign key(travel_id) references constraints(traveller_id));
+```Creating another table for foreign key
+create table foreign_key(Passport_no varchar(10) not null,travel_id int, foreign key(travel_id) references constraints(traveller_id));
+```
 Query OK, 0 rows affected (0.04 sec)
 
-
-mysql> desc constraints;
+```Describing the table
+desc constraints;
+```
 
 | Field        | Type        | Null | Key | Default | Extra          |
 |--------------|-------------|------|-----|---------|----------------|
@@ -134,8 +130,9 @@ Query OK, 1 row affected (0.01 sec)
 
 mysql> insert into foreign_key values('A882165237',10);
 Query OK, 1 row affected (0.01 sec)
-
-mysql> select*from foreign_key;
+```Extract data from foreign_key table
+select*from foreign_key;
+```
 
 | Passport_no | travel_id |
 |-------------|-----------|
@@ -151,8 +148,9 @@ mysql> select*from foreign_key;
 | A882165237  |        10 |
 
 10 rows in set (0.00 sec)
-
-mysql> desc foreign_key;
+```Describing foreign_key table
+desc foreign_key;
+```
 
 | Field       | Type        | Null | Key | Default | Extra |
 |-------------|-------------|------|-----|---------|-------|
@@ -161,5 +159,5 @@ mysql> desc foreign_key;
 
 2 rows in set (0.00 sec)
 
-mysql> 
+
 

@@ -74,7 +74,7 @@ select distinct age from constraints;
 |  30 |
 |  23 |
 |  19 |
-+-----+
+
 5 rows in set (0.00 sec)
 
 
