@@ -1,4 +1,5 @@
 ## SQL INDEXES
+# Display Databases
 ```Display databases
 show databases;
 ```
@@ -13,6 +14,7 @@ show databases;
 | sys                |
 
 6 rows in set (0.01 sec)
+# Using DB
 ```Using DB
 use blazers;
 ```
@@ -20,6 +22,7 @@ Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
 Database changed
+# Display tables
 ```Display tables
 show tables;
 ```
@@ -32,6 +35,7 @@ show tables;
 | student           |
 
 4 rows in set (0.00 sec)
+# Using DB
 ```Using DB
 use Example;
 ```
@@ -39,6 +43,7 @@ Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
 Database changed
+# Display tables
 ```Display tables
 show tables;
 ```
@@ -53,6 +58,7 @@ show tables;
 | student           |
 
 6 rows in set (0.01 sec)
+# Extract data from Nonclustered
 ```Extract data from Nonclustered
 select*from Nonclustered;
 ```
@@ -72,11 +78,13 @@ select*from Nonclustered;
 |      11 | Abisha    |       18 |
 
 11 rows in set (0.01 sec)
+# Creating an index
 ```Creating an index
 create index nc_xid on Nonclustered(stud_id,stud_Name, stud_Age);
 ```
 Query OK, 0 rows affected (0.06 sec)
 Records: 0  Duplicates: 0  Warnings: 0
+# `Retrive data
 ```Retrive data
 select*from Nonclustered;
 ```
@@ -96,6 +104,7 @@ select*from Nonclustered;
 |      11 | Abisha    |       18 |
 
 11 rows in set (0.00 sec)
+# Insert values
 ```Insert values
 insert into Nonclustered values(0,'Shravan',19);
 ```
@@ -120,10 +129,12 @@ select*from Nonclustered;
 |      11 | Abisha    |       18 |
 
 12 rows in set (0.00 sec)
+# Delete
 ```deleting
 delete from Nonclustered where stud_id=0;
 ```
 Query OK, 1 row affected (0.01 sec)
+# Extract data
 ```Extract data
 select*from Nonclustered;
 ```
@@ -143,6 +154,7 @@ select*from Nonclustered;
 |      11 | Abisha    |       18 |
 
 11 rows in set (0.00 sec)
+# List out the index
 ```List out the index
 show index from Nonclustered;
 ```
@@ -156,17 +168,19 @@ show index from Nonclustered;
 | Nonclustered |          1 | nc_xid   |            3 | stud_Age    | A         |          11 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
 
 5 rows in set (0.02 sec)
+# Drop an index
 ```Drop an index
 alter table Nonclustered drop index nc_name;
 ```
 Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
-
+# Drop another index
 ```Drop another index
 alter table Nonclustered drop index nc_id;
 ```
 Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
+# List out the index
 ```List out the index
 show index from Nonclustered;
 ```
