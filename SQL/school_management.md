@@ -227,9 +227,16 @@ mysql> SELECT COUNT(class),class FROM student_class WHERE status='ACTIVE'  GROUP
 3 rows in set (0.00 sec)
 ### Feature 12 _ Find Total no of students actively studying each class which has less than 5 students.
 ```
-select count(class),class FROM student_class GROUP BY class HAVING count(class)>5;
+select count(class),class FROM student_class GROUP BY class HAVING count(class)<5;
 ```
-Empty set (0.00 sec)
+
+
+| count(class) | class |
+|--------------|-------|
+|            2 |    12 |
+|            3 |     6 |
+
+
 ### Feature 13 - Display student and class details
 ```
 SELECT * FROM students INNER JOIN student_class ON students.id=student_class.id;
