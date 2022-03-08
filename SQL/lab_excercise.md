@@ -1,18 +1,10 @@
- sudo -u root mysql;
-[sudo] password for swetham: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 8
-Server version: 8.0.28-0ubuntu0.20.04.3 (Ubuntu)
-
-Copyright (c) 2000, 2022, Oracle and/or its affiliates.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-mysql> show databases;
+```syntax
+CREATE DATABASE Academy;
+```
+### Show databases
+```syntax
+show databases;
+```
 +--------------------+
 | Database           |
 +--------------------+
@@ -25,8 +17,27 @@ mysql> show databases;
 | performance_schema |
 | sys                |
 +--------------------+
-8 rows in set (0.02 sec)
+8 rows in set (0.02 sec) 
+### Creating tables
+```syntax
+create table user(id int primary key auto_increment,name varchar(20));
+```
+```syntax
+insert into user values(1,'Surya'),(2,'Chitra'),(3,'Revathi'),(4,'Lisha'),(5,'Dhaya'),(6,'Aswath'),(7,'Haiden'),(8,'Suguram');
+```
+```syntax
+create table batches(id int primary key auto_increment,name varchar(20));
+```
+```syntax
+insert into batches values(1,'HTML'),(2,'CSS'),(3,'JS'),(4,'ELS'),(5,'Tech'),(6,'HTML'),(7,'HTML'),(8,'HTML');
+```
+```syntax
+create table courses(id int primary key auto_increment,name varchar(20));
+```
+```syntax
+insert into courses values(1,'Batch1'),(2,'Batch2'),(3,'Batch2'),(4,'Batch1'),(5,'Batch2'),(6,'Batch1'),(7,'Batch1'),(8,'Batch1');
 
+```
 mysql> use Academy;
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
@@ -80,24 +91,7 @@ mysql> select*from student;
 +--------+-----------+-----+------------+---------+--------------+-----------+
 11 rows in set (0.00 sec)
 
-mysql> update student
-    -> Age=18 where studid<=5;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=18 where studid<=5' at line 2
-mysql> 
-mysql> update student Age=18 where studid=1 and studid<6;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=18 where studid=1 and studid<6' at line 1
-mysql> update student Age=18 where id=1 and id<6;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=18 where id=1 and id<6' at line 1
-mysql> update student Age=18 where  (id=1 and id<)6;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=18 where  (id=1 and id<)6' at line 1
-mysql> update student Age=18 where  (id=1 and id<60;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=18 where  (id=1 and id<60' at line 1
-mysql> update student Age=18 where id=1 and id<6;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=18 where id=1 and id<6' at line 1
-mysql> update student Age=18 where 'id=1 and id<6';
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=18 where 'id=1 and id<6'' at line 1
-mysql> update student Age=18 where 'studid=1 and studid<6';
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=18 where 'studid=1 and studid<6'' at line 1
+
 mysql> update student set Age=18 where studid=1 and studid<6;
 Query OK, 1 row affected (0.01 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
@@ -118,8 +112,9 @@ mysql> show tables;
 | user              |
 +-------------------+
 5 rows in set (0.00 sec)
-
-mysql> select batch_users.id ,user.id,user.name,batches.name from batch_users join user on user.id=batch_users.id join batches on batches.id=batch_users.id;
+```
+select batch_users.id ,user.id,user.name,batches.name from batch_users join user on user.id=batch_users.id join batches on batches.id=batch_users.id;
+```
 +----+----+--------+--------+
 | id | id | name   | name   |
 +----+----+--------+--------+
@@ -127,8 +122,9 @@ mysql> select batch_users.id ,user.id,user.name,batches.name from batch_users jo
 |  2 |  2 | Chitra | Batch2 |
 +----+----+--------+--------+
 2 rows in set (0.00 sec)
-
-mysql> select batch_users.id ,user.name,batches.name from batch_users join user on user.id=batch_users.id join batches on batches.id=batch_users.id;
+```
+select batch_users.id ,user.name,batches.name from batch_users join user on user.id=batch_users.id join batches on batches.id=batch_users.id;
+```
 +----+--------+--------+
 | id | name   | name   |
 +----+--------+--------+
@@ -137,9 +133,9 @@ mysql> select batch_users.id ,user.name,batches.name from batch_users join user 
 +----+--------+--------+
 2 rows in set (0.00 sec)
 
-mysql> select batch_courses.id ,user.name,courses.name from batch_users join user on user.id=batch_courses.id join courses on courses.id=batch_courses.id;
-ERROR 1054 (42S22): Unknown column 'batch_courses.id' in 'field list'
-mysql> select batch_courses.id ,user.name,courses.name from batch_courses join user on user.id=batch_courses.id join courses on courses.id=batch_courses.id;
+```
+select batch_courses.id ,user.name,courses.name from batch_courses join user on user.id=batch_courses.id join courses on courses.id=batch_courses.id;
+```
 +----+--------+------+
 | id | name   | name |
 +----+--------+------+
@@ -196,7 +192,19 @@ mysql> select*from user;
 +----+---------+
 5 rows in set (0.00 sec)
 
-mysql> select batch_courses.id ,user.name,courses.name from batch_courses join user on user.id=batch_courses.id join courses on courses.id=batch_courses.id;
+```syntax
+select batch_courses.id ,user.name,courses.name from batch_courses join user on user.id=batch_courses.id join courses on courses.id=batch_courses.id;
+```
++----+--------+------+
+| id | name   | name |
++----+--------+------+
+|  1 | Surya  | HTML |
+|  2 | Chitra | CSS  |
++----+--------+------+
+2 rows in set (0.00 sec)
+```
+select batch_courses.id ,user.name,courses.name from user join batch_courses on user.id=batch_courses.id join courses on courses.id=batch_courses.id;
+```
 +----+--------+------+
 | id | name   | name |
 +----+--------+------+
@@ -205,18 +213,9 @@ mysql> select batch_courses.id ,user.name,courses.name from batch_courses join u
 +----+--------+------+
 2 rows in set (0.00 sec)
 
-mysql> select batch_courses.id ,user.name,courses.name from user join batch_courses on user.id=batch_courses.id join courses on courses.id=batch_courses.id;
-+----+--------+------+
-| id | name   | name |
-+----+--------+------+
-|  1 | Surya  | HTML |
-|  2 | Chitra | CSS  |
-+----+--------+------+
-2 rows in set (0.00 sec)
-
-mysql> select batch_courses.id ,user.name,courses.name from user join batch_courses on user.id=batches.id join courses on courses.id=batches.id;
-ERROR 1054 (42S22): Unknown column 'batches.id' in 'on clause'
-mysql> select courses.id,courses.name,batches.id,batches.name,user.id,user.name from courses join batches on batches.id=courses.id join user on user.id=courses.id;
+```syntax
+select courses.id,courses.name,batches.id,batches.name,user.id,user.name from courses join batches on batches.id=courses.id join user on user.id=courses.id;
+```
 +----+------+----+--------+----+---------+
 | id | name | id | name   | id | name    |
 +----+------+----+--------+----+---------+
@@ -227,8 +226,9 @@ mysql> select courses.id,courses.name,batches.id,batches.name,user.id,user.name 
 |  5 | Tech |  5 | Batch2 |  5 | Dhaya   |
 +----+------+----+--------+----+---------+
 5 rows in set (0.00 sec)
-
-mysql> select courses.id,courses.name,batches.id,batches.name,user.id,user.name from courses join batches on batches.id=courses.id join user on user.id=courses.id where courses.name in(select name from courses where name='HTML');
+```
+select courses.id,courses.name,batches.id,batches.name,user.id,user.name from courses join batches on batches.id=courses.id join user on user.id=courses.id where courses.name in(select name from courses where name='HTML');
+```
 +----+------+----+--------+----+-------+
 | id | name | id | name   | id | name  |
 +----+------+----+--------+----+-------+
@@ -247,8 +247,9 @@ Records: 3  Duplicates: 0  Warnings: 0
 mysql> insert into batches(name) values('Batch1'),('Batch1'),('Batch1');
 Query OK, 3 rows affected (0.00 sec)
 Records: 3  Duplicates: 0  Warnings: 0
-
-mysql> select courses.id,courses.name,batches.id,batches.name,user.id,user.name from courses join batches on batches.id=courses.id join user on user.id=courses.id where courses.name in(select name from courses where name='HTML') and batches.name in(select name from batches where name='Batch1');
+```
+select courses.id,courses.name,batches.id,batches.name,user.id,user.name from courses join batches on batches.id=courses.id join user on user.id=courses.id where courses.name in(select name from courses where name='HTML') and batches.name in(select name from batches where name='Batch1');
+```
 +----+------+----+--------+----+---------+
 | id | name | id | name   | id | name    |
 +----+------+----+--------+----+---------+
