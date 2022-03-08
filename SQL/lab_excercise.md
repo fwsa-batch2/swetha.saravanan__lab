@@ -5,9 +5,9 @@ CREATE DATABASE Academy;
 ```syntax
 show databases;
 ```
-+--------------------+
+
 | Database           |
-+--------------------+
+|--------------------|
 | Academy            |
 | Example            |
 | blazers            |
@@ -16,7 +16,7 @@ show databases;
 | mysql              |
 | performance_schema |
 | sys                |
-+--------------------+
+
 8 rows in set (0.02 sec) 
 
 ### using database
@@ -129,7 +129,7 @@ select batch_courses.id ,user.name,courses.name from batch_courses join user on 
 |  8 | Suguram | HTML |
 
 8 rows in set (0.01 sec)
-````
+```
 select courses.id,courses.name,batches.id,batches.name,user.id,user.name from courses join batches on batches.id=courses.id join user on user.id=courses.id;
 ```
 
