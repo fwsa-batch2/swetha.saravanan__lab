@@ -1,3 +1,4 @@
+### Creating database
 ```syntax
 CREATE DATABASE Academy;
 ```
