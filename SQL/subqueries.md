@@ -117,4 +117,46 @@ select*from student_marks;
 |  8 | Saranya  |    90 |
 |  9 | Swetha   |   100 |
 | 10 | Selva    |    98 |
+### using subqueries in delete statement
+```
+delete from score where marks in (select marks from student_marks where marks=100);
+```
+### showing datas
+```
+select*from score;
+```
+
+| sno | name      | marks |
+|-----|-----------|-------|
+|   1 | Abisha    |    96 |
+|   2 | Annam     |    96 |
+|   3 | Aswath    |    50 |
+|   4 | Haiden    |    75 |
+|   5 | Jerusheya |    80 |
+|   6 | Rishi     |    60 |
+|   7 | Santhanu  |    99 |
+|   8 | Saranya   |    90 |
+|  10 | Selva     |    98 |
+### using subqueries in update statement
+```
+update score set Name='Shravan' where sno in (select id from student_mark
+s where id=10);
+```
+### Get datas
+```
+select*from score;
+```
+
+| sno | name      | marks |
+|-----|-----------|-------|
+|   1 | Santhanu  |    96 |
+|   2 | Abisha    |    96 |
+|   3 | Aswath    |    50 |
+|   4 | Haiden    |    75 |
+|   5 | Jerusheya |    80 |
+|   6 | Rishi     |    60 |
+|   7 | Santhanu  |    99 |
+|   8 | Saranya   |    90 |
+|  10 | Shravan   |    98 |
+
 
