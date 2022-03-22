@@ -310,7 +310,6 @@ SELECT * FROM Contact;
 
 ### EER DIAGRAM
 
-![er_diagram](https://user-images.githubusercontent.com/93571121/159451633-e9c1078f-b722-4ebb-bc9e-96a647f8acd1.png)
-
+![er](https://user-images.githubusercontent.com/93571121/159426888-f0ec09e9-1a1a-442b-b4c3-420f7e2bfd44.png)
 
 
