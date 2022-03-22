@@ -55,12 +55,12 @@ select*from book;
 
 | sno | name      | marks |
 |-----|-----------|-------|
-|   1 | Abisha    | 96%   |
-|   2 | Annam     | 97%   |
-|   3 | Aswath    | 50%   |
-|   4 | Haiden    | 85%   |
-|   5 | Jerusheya | 87%   |
-|   6 | Rishi     | 60%   |
+|   1 | Abisha    | 96    |
+|   2 | Annam     | 97    |
+|   3 | Aswath    | 50    |
+|   4 | Haiden    | 85    |
+|   5 | Jerusheya | 87    |
+|   6 | Rishi     | 60    |
 |   7 | Santhanu  | 99    |
 |   8 | Saranya   | 90    |
 |   9 | Swetha    | 100   |

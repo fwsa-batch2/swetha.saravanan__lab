@@ -304,9 +304,9 @@ SELECT * FROM Contact;
 |          8 |       8 | selva@gmail.com            | Show more places         |
 |          9 |       9 | santhanu@gmail.com         | Add places               |
 |         10 |      10 | riyaz@gmail.com            | Add some special offers  |
-
-
 ### ER DIAGRAM
+
+### EER DIAGRAM
 
 
 ![er](https://user-images.githubusercontent.com/93571121/159426888-f0ec09e9-1a1a-442b-b4c3-420f7e2bfd44.png)
