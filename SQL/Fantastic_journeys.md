@@ -305,4 +305,6 @@ SELECT * FROM Contact;
 |          9 |       9 | santhanu@gmail.com         | Add places               |
 |         10 |      10 | riyaz@gmail.com            | Add some special offers  |
 
+### ER DIAGRAM
+
 
