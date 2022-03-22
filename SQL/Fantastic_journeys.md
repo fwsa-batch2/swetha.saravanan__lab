@@ -307,13 +307,19 @@ SELECT * FROM Contact;
 
 
 ### ER DIAGRAM
-![ER](https://user-images.githubusercontent.com/93571121/159445662-e3517b67-2ac0-4be3-a61e-8855384b263f.png)
+![Drawing (1)](https://user-images.githubusercontent.com/93571121/159449815-94a09583-c7ab-421e-a168-22acfcdf92f4.png)
+
+
 
 
 ### EER DIAGRAM
 
 
-![er](https://user-images.githubusercontent.com/93571121/159426888-f0ec09e9-1a1a-442b-b4c3-420f7e2bfd44.png)
+![ER_diagram](https://user-images.githubusercontent.com/93571121/159452513-cb9a70fe-aabd-4ec6-940c-0419f12e0498.png)
+
+### ER DIAGRAM
+![Drawing (1)](https://user-images.githubusercontent.com/93571121/159449815-94a09583-c7ab-421e-a168-22acfcdf92f4.png)
+
 
 # SQL VIEWS
 ### Creating view called user login
@@ -333,7 +339,6 @@ show tables;
 | Reviews                      |
 | User                         |
 | user_login                   |
-
 
 ### Describing view
 ```
@@ -365,4 +370,5 @@ SELECT*FROM user_login;
 ```
 RENAME TABLE user_login to User_login;
 ```
+
 
