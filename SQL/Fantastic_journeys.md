@@ -305,6 +305,7 @@ SELECT * FROM Contact;
 |          9 |       9 | santhanu@gmail.com         | Add places               |
 |         10 |      10 | riyaz@gmail.com            | Add some special offers  |
 ### ER DIAGRAM
+![Drawing+(1)](https://user-images.githubusercontent.com/93571121/159428966-d385b0ed-d6ce-45ee-ba1f-a34435ca6c9b.png)
 
 
 ### ER DIAGRAM
