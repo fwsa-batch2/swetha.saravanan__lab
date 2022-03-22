@@ -304,19 +304,65 @@ SELECT * FROM Contact;
 |          8 |       8 | selva@gmail.com            | Show more places         |
 |          9 |       9 | santhanu@gmail.com         | Add places               |
 |         10 |      10 | riyaz@gmail.com            | Add some special offers  |
-<<<<<<< HEAD
-=======
+
+
 ### ER DIAGRAM
 ![ER](https://user-images.githubusercontent.com/93571121/159445662-e3517b67-2ac0-4be3-a61e-8855384b263f.png)
 
-
-
-
->>>>>>> 93351cabcd251e2b47ef001aa79d0633cd8a7746
-### ER DIAGRAM
 
 ### EER DIAGRAM
 
 
 ![er](https://user-images.githubusercontent.com/93571121/159426888-f0ec09e9-1a1a-442b-b4c3-420f7e2bfd44.png)
+
+# SQL VIEWS
+### Creating view called user login
+```
+CREATE VIEW user_login AS SELECT Email,Password FROM User;
+```
+```
+show tables;
+```
+
+| Tables_in_FANTASTIC_JOURNEYS |
+|------------------------------|
+| Booking                      |
+| Contact                      |
+| Payments                     |
+| Plan_trip                    |
+| Reviews                      |
+| User                         |
+| user_login                   |
+
+
+### Describing view
+```
+desc user_login;
+```
+
+| Field    | Type         | Null | Key | Default | Extra |
+|----------|--------------|------|-----|---------|-------|
+| Email    | varchar(100) | NO   |     | NULL    |       |
+| Password | varchar(100) | NO   |     | NULL    |       |
+### Get values from user_login
+```
+SELECT*FROM user_login;
+```
+
+| Email                      | Password |
+|----------------------------|----------|
+| swethakarthika16@gmail.com | 12345#Sm |
+| abisha@gmail.com           | abi1234@ |
+| jerusheya@gmail.com        | jeru234@ |
+| aswath@gmail.com           | aswath4$ |
+| haiden@gmail.com           | haiden5$ |
+| saran@gmail.com            | saran20$ |
+| rishi@gmail.com            | rishi13@ |
+| selva@gmail.com            | selva32@ |
+| santhanu@gmail.com         | santa15* |
+| riyaz@gmail.com            | riyaz32@ |
+### Rename view name
+```
+RENAME TABLE user_login to User_login;
+```
 
