@@ -309,7 +309,8 @@ SELECT * FROM Contact;
 ![Drawing (1)](https://user-images.githubusercontent.com/93571121/159449815-94a09583-c7ab-421e-a168-22acfcdf92f4.png)
 
 ### EER DIAGRAM
-/home/swetham/swetha.saravanan__lab/SQL/ER_diagram.svg
+
+![er_diagram](https://user-images.githubusercontent.com/93571121/159451633-e9c1078f-b722-4ebb-bc9e-96a647f8acd1.png)
 
 
 
