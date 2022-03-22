@@ -317,8 +317,7 @@ SELECT * FROM Contact;
 
 ![ER_diagram](https://user-images.githubusercontent.com/93571121/159452513-cb9a70fe-aabd-4ec6-940c-0419f12e0498.png)
 
-### ER DIAGRAM
-![Drawing (1)](https://user-images.githubusercontent.com/93571121/159449815-94a09583-c7ab-421e-a168-22acfcdf92f4.png)
+
 
 
 # SQL VIEWS
