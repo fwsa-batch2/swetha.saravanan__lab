@@ -40,7 +40,9 @@ SHOW TABLES;
 | User                         |
 
 ## Creating table called User
+```
 CREATE TABLE User(ID int PRIMARY KEY,Name varchar(100) NOT NULL,Email varchar(100) NOT NULL UNIQUE KEY,Phone_no bigint NOT NULL UNIQUE KEY,Password varchar(100) NOT NULL UNIQUE KEY);
+```
 ### Describing table called User
 ```
 DESC User;
@@ -151,7 +153,26 @@ DESC Booking;
 | Age         | int          | NO   |     | NULL    |                |
 | Passport_no | varchar(100) | NO   |     | NULL    |                |
 | Gender      | char(1)      | NO   |     | NULL    |                |
+### Inserting values
+```
+INSERT INTO Booking VALUES(1,1,'Swetha',21,'A2096457','F'),(2,2,'Abisha',22,'A2096458','F'),(3,3,'Jerusheya',23,'A2096459','F'),(4,4,'Aswath',22,'A2093457','M'),(5,5,'Haiden',26,'A2026457','M'),(6,6,'Saranya',21,'A2096157','F'),(7,7,'Rishi',26,'A2092457','M'),(8,8,'Selva',26,'A2096657','M'),(9,9,'Santhanu',26,'A2091457','M'),(10,10,'Riyaz',25,'A5096457','M');
+```
+```
+SELECT*FROM Booking;
+```
 
+| Booking_id | Trip_id | Name      | Age | Passport_no | Gender |
+|------------|---------|-----------|-----|-------------|--------|
+|          1 |       1 | Swetha    |  21 | A2096457    | F      |
+|          2 |       2 | Abisha    |  22 | A2096458    | F      |
+|          3 |       3 | Jerusheya |  23 | A2096459    | F      |
+|          4 |       4 | Aswath    |  22 | A2093457    | M      |
+|          5 |       5 | Haiden    |  26 | A2026457    | M      |
+|          6 |       6 | Saranya   |  21 | A2096157    | F      |
+|          7 |       7 | Rishi     |  26 | A2092457    | M      |
+|          8 |       8 | Selva     |  26 | A2096657    | M      |
+|          9 |       9 | Santhanu  |  26 | A2091457    | M      |
+|         10 |      10 | Riyaz     |  25 | A5096457    | M      |
 
 ### Creating table called Payments
 ```
@@ -169,6 +190,29 @@ DESC Payments;
 | Book_id       | int          | NO   | MUL | NULL    |                |
 | Ac_holdername | varchar(100) | NO   |     | NULL    |                |
 | Account_no    | bigint       | NO   | UNI | NULL    |                |
+### Inserting Values
+```
+INSERT INTO Payments VALUES(1,1,'Swetha',50010020010023,300000),(2,2,'Abisha',50010020010013,100000),(3,3,'Jerusheya',50010030010013,100000),(4,4,'Aswath',50010070010013,100000);,(5,5,'Haiden',50010070010093,300000),(6,6,'Saranya',50010050010093,100000),(7,7,'Rishi',50010050010003,300000),(8,8,'Selva',50010059010003,100000),(9,9,'Santhanu',50010009010003,300000),(10,10,'Riyaz',50010009010203,100000)
+```
+### Extract values
+```
+SELECT*FROM Payments;
+```
+
+| Pay_id | Book_id | Ac_holdername | Account_no     | Amount |
+|--------|---------|---------------|----------------|--------|
+|      1 |       1 | Swetha        | 50010020010023 | 300000 |
+|      2 |       2 | Abisha        | 50010020010013 | 100000 |
+|      3 |       3 | Jerusheya     | 50010030010013 | 100000 |
+|      4 |       4 | Aswath        | 50010070010013 | 100000 |
+|      5 |       5 | Haiden        | 50010070010093 | 300000 |
+|      6 |       6 | Saranya       | 50010050010093 | 100000 |
+|      7 |       7 | Rishi         | 50010050010003 | 300000 |
+|      8 |       8 | Selva         | 50010059010003 | 100000 |
+|      9 |       9 | Santhanu      | 50010009010003 | 300000 |
+|     10 |      10 | Riyaz         | 50010009010203 | 100000 |
+
+
 
 
 ### Creating table called Reviews
@@ -254,7 +298,7 @@ SELECT * FROM Contact;
 |          2 |       2 | abisha@gmail.com           | I did not get my tickets |
 |          3 |       3 | jerusheya@gmail.com        | Extend trip days         |
 |          4 |       4 | aswath@gmail.com           | Show more places         |
-|          5 |       5 | Haiden                     | Add food facilites       |
+|          5 |       5 | Haiden@gmail.com           | Add food facilites       |
 |          6 |       6 | saran@gmail.com            | Add places               |
 |          7 |       7 | rishi@gmail.com            | Add food facilities      |
 |          8 |       8 | selva@gmail.com            | Show more places         |
