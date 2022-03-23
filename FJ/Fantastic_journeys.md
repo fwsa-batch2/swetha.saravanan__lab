@@ -316,7 +316,8 @@ SELECT * FROM Contact;
 ### EER DIAGRAM
 
 
-![er](https://user-images.githubusercontent.com/93571121/159695835-dbc2f452-5cf6-442b-acc9-5462605de37a.png)
+![ermodel](https://user-images.githubusercontent.com/93571121/159696396-0eb7f42e-f2e8-4196-b386-3097a25e04cb.png)
+
 
 
 
