@@ -307,7 +307,8 @@ SELECT * FROM Contact;
 
 
 ### ER DIAGRAM
-![Drawing (1)](https://user-images.githubusercontent.com/93571121/159449815-94a09583-c7ab-421e-a168-22acfcdf92f4.png)
+![Drawing (1) (1)](https://user-images.githubusercontent.com/93571121/159696058-5e944523-1d49-4980-ace7-78f309a991de.png)
+
 
 
 
@@ -315,7 +316,7 @@ SELECT * FROM Contact;
 ### EER DIAGRAM
 
 
-![ER_diagram](https://user-images.githubusercontent.com/93571121/159452513-cb9a70fe-aabd-4ec6-940c-0419f12e0498.png)
+![er](https://user-images.githubusercontent.com/93571121/159695835-dbc2f452-5cf6-442b-acc9-5462605de37a.png)
 
 
 
