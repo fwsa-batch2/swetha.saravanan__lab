@@ -30,6 +30,7 @@ use FANTASTIC_JOURNEYS;
 SHOW TABLES;
 ```
 
+
 | Tables_in_FANTASTIC_JOURNEYS |
 |------------------------------|
 | Booking                      |
@@ -37,7 +38,11 @@ SHOW TABLES;
 | Payments                     |
 | Plan_trip                    |
 | Reviews                      |
+| Roles                        |
 | User                         |
+| User_login                   |
+
+
 
 ## Creating table called User
 ```
@@ -73,6 +78,7 @@ insert into User values(9,'Santhanu','santhanu@gmail.com',9027654321,'santa15*')
 SELECT * FROM User;
 ```
 
+
 | ID | Name      | Email                      | Phone_no   | Password |
 |----|-----------|----------------------------|------------|----------|
 |  1 | Swetha    | swethakarthika16@gmail.com | 9025336748 | 12345#Sm |
@@ -85,6 +91,34 @@ SELECT * FROM User;
 |  8 | Selva     | selva@gmail.com            | 9017654321 | selva32@ |
 |  9 | Santhanu  | santhanu@gmail.com         | 9027654321 | santa15* |
 | 10 | Riyaz     | riyaz@gmail.com            | 9016654321 | riyaz32@ |
+| 11 | Zendya    | zendya@gmail.com           | 8906543211 | admin123 |
+| 12 | Zayn      | zayn@gmail.com             | 8907654321 | admin321 |
+| 13 | Justin    | justin@gmail.com           | 8903212323 | admin231 |
+| 14 | John      | john@gmail.com             | 8906143211 | admin124 |
+| 15 | Ronaldo   | cr7@gmail.com              | 8909654321 | admin434 |
+| 16 | Thomas    | thomas@gmail.com           | 8903212123 | admin254 |
+
+### Creating table called Roles
+```
+CREATE TABLE Roles(Role_id int primary key auto_increment,user_id int not null,foreign key(user_id) references User(ID) , Name varchar(100) not null);
+```
+```
+INSERT INTO Roles VALUES(1,11,'Guidance'),(2,12,'Guidance'),(3,13,'Guidance'),(4,14,'Management'),(5,15,'Management'),(6,16,'Guidance');
+```
+### Get datas
+```
+select*from Roles;
+```
+
+| Role_id | user_id | Role       |
+|---------|---------|------------|
+|       1 |      11 | Guidance   |
+|       2 |      12 | Guidance   |
+|       3 |      13 | Guidance   |
+|       4 |      14 | Management |
+|       5 |      15 | Management |
+|       6 |      16 | Guidance   |
+
 
 ### Creating table called Plan_trip
 ``` 
