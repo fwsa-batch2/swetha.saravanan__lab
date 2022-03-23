@@ -103,6 +103,17 @@ SELECT * FROM User;
 CREATE TABLE Roles(Role_id int primary key auto_increment,user_id int not null,foreign key(user_id) references User(ID) , Name varchar(100) not null);
 ```
 ```
+ desc Roles;
+```
+
+| Field   | Type         | Null | Key | Default | Extra          |
+|---------|--------------|------|-----|---------|----------------|
+| Role_id | int          | NO   | PRI | NULL    | auto_increment |
+| user_id | int          | NO   | MUL | NULL    |                |
+| Role    | varchar(100) | NO   |     | NULL    |                |
+
+
+```
 INSERT INTO Roles VALUES(1,11,'Guidance'),(2,12,'Guidance'),(3,13,'Guidance'),(4,14,'Management'),(5,15,'Management'),(6,16,'Guidance');
 ```
 ### Get datas
@@ -224,6 +235,9 @@ DESC Payments;
 | Book_id       | int          | NO   | MUL | NULL    |                |
 | Ac_holdername | varchar(100) | NO   |     | NULL    |                |
 | Account_no    | bigint       | NO   | UNI | NULL    |                |
+| Amount        | int          | NO   |     | NULL    |                |
+
+
 ### Inserting Values
 ```
 INSERT INTO Payments VALUES(1,1,'Swetha',50010020010023,300000),(2,2,'Abisha',50010020010013,100000),(3,3,'Jerusheya',50010030010013,100000),(4,4,'Aswath',50010070010013,100000);,(5,5,'Haiden',50010070010093,300000),(6,6,'Saranya',50010050010093,100000),(7,7,'Rishi',50010050010003,300000),(8,8,'Selva',50010059010003,100000),(9,9,'Santhanu',50010009010003,300000),(10,10,'Riyaz',50010009010203,100000)
