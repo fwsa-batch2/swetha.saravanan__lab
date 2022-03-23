@@ -341,7 +341,8 @@ SELECT * FROM Contact;
 
 
 ### ER DIAGRAM
-![Drawing (1)](https://user-images.githubusercontent.com/93571121/159449815-94a09583-c7ab-421e-a168-22acfcdf92f4.png)
+![Drawing (1) (1)](https://user-images.githubusercontent.com/93571121/159696058-5e944523-1d49-4980-ace7-78f309a991de.png)
+
 
 
 
@@ -349,7 +350,8 @@ SELECT * FROM Contact;
 ### EER DIAGRAM
 
 
-![ER_diagram](https://user-images.githubusercontent.com/93571121/159452513-cb9a70fe-aabd-4ec6-940c-0419f12e0498.png)
+![ermodel](https://user-images.githubusercontent.com/93571121/159696396-0eb7f42e-f2e8-4196-b386-3097a25e04cb.png)
+
 
 
 
