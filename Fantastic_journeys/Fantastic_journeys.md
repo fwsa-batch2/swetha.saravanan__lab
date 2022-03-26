@@ -373,8 +373,7 @@ DESC Status
 
 
 ### ER DIAGRAM
-![Drawing (1) (1)](https://user-images.githubusercontent.com/93571121/159696058-5e944523-1d49-4980-ace7-78f309a991de.png)
-
+![Drawing (1) (1) (1)](https://user-images.githubusercontent.com/93571121/160237874-b6780a5d-b08c-491a-8116-cb82e29e96e6.png)
 
 
 
@@ -382,5 +381,5 @@ DESC Status
 ### EER DIAGRAM
 
 
-![ermodel](https://user-images.githubusercontent.com/93571121/159696396-0eb7f42e-f2e8-4196-b386-3097a25e04cb.png)
+![eermodel](https://user-images.githubusercontent.com/93571121/160237914-995bbfc6-1fdb-4f29-b3eb-12d59bad5130.png)
 
