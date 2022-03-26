@@ -4,7 +4,7 @@
 CREATE DATABASE FANTASTIC_JOURNEYS;
 ```
 ## 
-```
+```mysql
 SHOW DATABASES;
 ```
 
@@ -44,7 +44,7 @@ SHOW TABLES;
 
 
 
-## Creating table called User
+## 1. User
 ```
 CREATE TABLE User(ID int PRIMARY KEY,Name varchar(100) NOT NULL,Email varchar(100) NOT NULL UNIQUE KEY,Phone_no bigint NOT NULL UNIQUE KEY,Password varchar(100) NOT NULL UNIQUE KEY);
 ```
@@ -78,7 +78,6 @@ insert into User values(9,'Santhanu','santhanu@gmail.com',9027654321,'santa15*')
 SELECT * FROM User;
 ```
 
-
 | ID | Name      | Email                      | Phone_no   | Password |
 |----|-----------|----------------------------|------------|----------|
 |  1 | Swetha    | swethakarthika16@gmail.com | 9025336748 | 12345#Sm |
@@ -97,8 +96,11 @@ SELECT * FROM User;
 | 14 | John      | john@gmail.com             | 8906143211 | admin124 |
 | 15 | Ronaldo   | cr7@gmail.com              | 8909654321 | admin434 |
 | 16 | Thomas    | thomas@gmail.com           | 8903212123 | admin254 |
+| 17 | Helen     | helen@gmail.com            | 8877009911 | admin@23 |
+| 18 | Gardener  | garden@gmail.com           | 9012334532 | admin@12 |
 
-### Creating table called Roles
+
+### 2. Roles
 ```
 CREATE TABLE Roles(Role_id int primary key auto_increment,user_id int not null,foreign key(user_id) references User(ID) , Name varchar(100) not null);
 ```
@@ -121,17 +123,18 @@ INSERT INTO Roles VALUES(1,11,'Guidance'),(2,12,'Guidance'),(3,13,'Guidance'),(4
 select*from Roles;
 ```
 
-| Role_id | user_id | Role       |
-|---------|---------|------------|
-|       1 |      11 | Guidance   |
-|       2 |      12 | Guidance   |
-|       3 |      13 | Guidance   |
-|       4 |      14 | Management |
-|       5 |      15 | Management |
-|       6 |      16 | Guidance   |
+| Role_id | user_id | Role     |
+|---------|---------|----------|
+|       1 |      11 | Admin    |
+|       2 |      12 | Admin    |
+|       3 |      13 | Admin    |
+|       4 |      14 | Guidance |
+|       5 |      15 | Guidance |
+|       6 |      16 | Guidance |
+|       7 |      17 | Guidance |
+|       8 |      18 | Guidance |
 
-
-### Creating table called Plan_trip
+### 3. Plan_trip
 ``` 
 create table Plan_trip (trip_id int primary key auto_increment,user_id int not null,foreign key(user_id) references User(ID),Source varchar(100) not null, Destination varchar(100) not null,Start date not null,End date not null,Adults tinyint not null CHECK(Adults<10),Children tinyint not null CHECK(Children<10));
 ```
@@ -162,7 +165,7 @@ insert into Plan_trip values(6,6,'Hawaii','London','2022-03-27','2022-04-05',1,0
 ```
 insert into Plan_trip values(8,8,'England','India','2022-03-28','2022-04-07',1,0),(9,9,'Ukraine','Switzerland','2022-03-29','2022-04-07',1,1),(10,10,'Russia','Newyork','2022-03-30','2022-04-08',1,0);
 ```
-### Extract values
+### Get datas
 ```
 select*from Plan_trip;
 ```
@@ -181,7 +184,7 @@ select*from Plan_trip;
 |      10 |      10 | Russia   | Newyork      | 2022-03-30 | 2022-04-08 |      1 |        0 |
 
 
-### Creating table callled Booking
+### 4.  Booking
 ```
 CREATE TABLE Booking(Booking_id int PRIMARY KEY AUTO_INCREMENT,Trip_id int NOT NULL,foreign key(Trip_id) references Plan_trip(trip_id) ,Name varchar(100) NOT NULL,Age int NOT NULL,Passport_no varchar(100) NOT NULL,Gender char(1) NOT NULL CHECK(Gender IN ('M','F')));
 ```
@@ -219,7 +222,7 @@ SELECT*FROM Booking;
 |          9 |       9 | Santhanu  |  26 | A2091457    | M      |
 |         10 |      10 | Riyaz     |  25 | A5096457    | M      |
 
-### Creating table called Payments
+### 5. Payments
 ```
 CREATE TABLE Payments(Pay_id int Primary key auto_increment,Book_id int,
 foreign key(Book_id) references Booking(Booking_id), Ac_holdername varchar(100)
@@ -242,7 +245,7 @@ DESC Payments;
 ```
 INSERT INTO Payments VALUES(1,1,'Swetha',50010020010023,300000),(2,2,'Abisha',50010020010013,100000),(3,3,'Jerusheya',50010030010013,100000),(4,4,'Aswath',50010070010013,100000);,(5,5,'Haiden',50010070010093,300000),(6,6,'Saranya',50010050010093,100000),(7,7,'Rishi',50010050010003,300000),(8,8,'Selva',50010059010003,100000),(9,9,'Santhanu',50010009010003,300000),(10,10,'Riyaz',50010009010203,100000)
 ```
-### Extract values
+### Get datas
 ```
 SELECT*FROM Payments;
 ```
@@ -263,7 +266,7 @@ SELECT*FROM Payments;
 
 
 
-### Creating table called Reviews
+### 6.  Reviews
 ```
 create table Reviews(Review_id int primary key auto_increment,user_id int not null,foreign key(user_id) references User(ID),Name varchar(100) not null,Reviews text not null);
 ```
@@ -306,7 +309,7 @@ SELECT*FROM Reviews;
 |        10 |      10 | Riyaz     | Excellent                 |
 
 
-### Creating table called contact
+### 7. Contact
 
 ```
 create table Contact(contact_id int primary key auto_increment,user_id int not null, foreign Key(user_id) references User(ID),Email varchar(100) not null,Queries text not null);
@@ -335,7 +338,7 @@ INSERT INTO Contact VALUES(4,4,'aswath@gmail.com','Show more places'),(5,5,'Haid
 INSERT INTO Contact VALUES(7,7,'rishi@gmail.com','Add food facilities'),(8,8,'selva@gmail.com','Show more places'),(9,9,'santhanu@gmail.com','Add places'
 ),(10,10,'riyaz@gmail.com','Add some special offers');
 ```
-### Extract values
+### Get datas
 ```
 SELECT * FROM Contact;
 ```
@@ -353,6 +356,21 @@ SELECT * FROM Contact;
 |          9 |       9 | santhanu@gmail.com         | Add places               |
 |         10 |      10 | riyaz@gmail.com            | Add some special offers  |
 
+### 8. Status
+```
+CREATE TABLE Status(Book_id int not null,foreign key(Book_id) references
+Payments(Pay_id), status varchar(20) not null,Support_id int,foreign key(Support_id) references Roles(Role_id),check(status in('Booked','NotBoooked')));
+```
+```
+DESC Status
+```
+
+| Field      | Type        | Null | Key | Default | Extra |
+|------------|-------------|------|-----|---------|-------|
+| Book_id    | int         | NO   | MUL | NULL    |       |
+| status     | varchar(20) | NO   |     | NULL    |       |
+| Support_id | int         | YES  | MUL | NULL    |       |
+
 
 ### ER DIAGRAM
 ![Drawing (1) (1)](https://user-images.githubusercontent.com/93571121/159696058-5e944523-1d49-4980-ace7-78f309a991de.png)
@@ -365,59 +383,4 @@ SELECT * FROM Contact;
 
 
 ![ermodel](https://user-images.githubusercontent.com/93571121/159696396-0eb7f42e-f2e8-4196-b386-3097a25e04cb.png)
-
-
-
-
-
-# SQL VIEWS
-### Creating view called user login
-```
-CREATE VIEW user_login AS SELECT Email,Password FROM User;
-```
-```
-show tables;
-```
-
-| Tables_in_FANTASTIC_JOURNEYS |
-|------------------------------|
-| Booking                      |
-| Contact                      |
-| Payments                     |
-| Plan_trip                    |
-| Reviews                      |
-| User                         |
-| user_login                   |
-
-### Describing view
-```
-desc user_login;
-```
-
-| Field    | Type         | Null | Key | Default | Extra |
-|----------|--------------|------|-----|---------|-------|
-| Email    | varchar(100) | NO   |     | NULL    |       |
-| Password | varchar(100) | NO   |     | NULL    |       |
-### Get values from user_login
-```
-SELECT*FROM user_login;
-```
-
-| Email                      | Password |
-|----------------------------|----------|
-| swethakarthika16@gmail.com | 12345#Sm |
-| abisha@gmail.com           | abi1234@ |
-| jerusheya@gmail.com        | jeru234@ |
-| aswath@gmail.com           | aswath4$ |
-| haiden@gmail.com           | haiden5$ |
-| saran@gmail.com            | saran20$ |
-| rishi@gmail.com            | rishi13@ |
-| selva@gmail.com            | selva32@ |
-| santhanu@gmail.com         | santa15* |
-| riyaz@gmail.com            | riyaz32@ |
-### Rename view name
-```
-RENAME TABLE user_login to User_login;
-```
-
 
