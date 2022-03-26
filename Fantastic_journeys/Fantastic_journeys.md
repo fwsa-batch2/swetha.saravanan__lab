@@ -363,7 +363,7 @@ SELECT * FROM Contact;
 ### EER DIAGRAM
 
 
-![ermodel](https://user-images.githubusercontent.com/93571121/159696396-0eb7f42e-f2e8-4196-b386-3097a25e04cb.png)
+![eermodel](https://user-images.githubusercontent.com/93571121/160237914-995bbfc6-1fdb-4f29-b3eb-12d59bad5130.png)
 
 
 
