@@ -381,5 +381,6 @@ DESC Status
 ### EER DIAGRAM
 
 
-![eermodel](https://user-images.githubusercontent.com/93571121/160237914-995bbfc6-1fdb-4f29-b3eb-12d59bad5130.png)
+![EER new1](https://user-images.githubusercontent.com/93571121/160758082-e888ef29-0e41-49d8-9bc2-e3b4b1665645.png)
+
 
