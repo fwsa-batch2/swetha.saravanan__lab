@@ -10,4 +10,5 @@ public class Factorial {
            Factorial = i*Factorial;
         }
         System.out.println("Factorial of the " + no + " is " + Factorial);
+        sc.close();
     }}

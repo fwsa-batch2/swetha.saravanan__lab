@@ -19,7 +19,7 @@ public class Conchaininclass {
         System.out.println("I am here to Confuse you");
     }
     public static void main(String[] args) {
-        new Super(2);
-        new Super("Swetha",17);
-        new Super();
+        new Conchaininclass(2);
+        new Conchaininclass("Swetha",17);
+        new Conchaininclass();
     }}

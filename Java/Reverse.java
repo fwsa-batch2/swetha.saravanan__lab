@@ -17,5 +17,6 @@ public class Reverse {
         }
         int ReversedNum = Integer.parseInt(result);
         System.out.println(ReversedNum);
+        no.close();
     }
 }

@@ -14,5 +14,6 @@ public class prime {
         else {
             System.out.println("The Given number is prime");
         }
+        Num.close();
     }
 }

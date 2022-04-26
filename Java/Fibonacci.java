@@ -15,5 +15,6 @@ public class Fibonacci {
             b=c;
             
         }
+        no.close();
     }
 }
