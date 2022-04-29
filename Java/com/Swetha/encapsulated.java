@@ -1,7 +1,6 @@
 package com.Swetha;
 public class encapsulated {
    public int x=10;
-   private String password = "Swetha21";
    protected int y=20;
    int z=10;
 }

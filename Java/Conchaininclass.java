@@ -8,18 +8,18 @@ public class Conchaininclass {
     Conchaininclass(String name , int x) {
         System.out.println("Double Parametrized Constructor");
     }}
-    class Super extends Conchaininclass {
-    Super() {
+    class Example extends Conchaininclass {
+    Example() {
         System.out.println("Zero arg Constructor");
     }
-    Super(int x)  {
+    Example(int x)  {
         System.out.println("One Arg Constructor");
     }
-    Super(String name , int x) {
+    Example(String name , int x) {
         System.out.println("I am here to Confuse you");
     }
     public static void main(String[] args) {
-        new Conchaininclass(2);
-        new Conchaininclass("Swetha",17);
-        new Conchaininclass();
+        new Example(2);
+        new Example("Swetha",17);
+        new Example();
     }}
