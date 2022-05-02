@@ -5,15 +5,19 @@ public class prime {
         Scanner Num=new Scanner(System.in);
         System.out.println("Enter a Number to check Prime or not");
         int No=Num.nextInt();
-        if(No==2||No==3||No==5||No==7) {
-           System.out.println("The Given number is prime");
-        }
-        else if((No%2==0)||(No%3==0)||(No%5==0)||(No%7==0)){
-            System.out.println("The Given number is not prime"); 
-        }
-        else {
-            System.out.println("The Given number is prime");
-        }
+        int count=0;
+        for(int i=1; i<=No; i++) {
+              if(No%i==0) {
+                  count++;
+              }
+            }
+            if(count==2) {
+                System.out.println("Given no is Prime number");
+            }
+            else {
+                System.out.println("Given no is not Prime number");
+            }
+        
         Num.close();
     }
 }
