@@ -5,6 +5,10 @@ abstract void types();
 abstract void visible();
 void example() {
     System.out.println("SMS");
+} 
+abstract double area(double r);
+double circumference(double d) {
+    return 2*3.14*d;
 }
 }
 public class abstraction extends action{
@@ -33,5 +37,13 @@ public class abstraction extends action{
        obj.types();
        obj.visible();
        obj.example();
+       System.out.println(obj.circumference(2.1));
+       System.out.println(obj.area(2.3));
    }
+
+@Override
+double area(double r) {
+    
+    return 3.14*(Math.pow(2,r));
+}
 }

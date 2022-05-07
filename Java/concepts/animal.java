@@ -1,11 +1,11 @@
 package concepts;
 
- interface Innerexofinterf {
+ interface example {
        void sleep();
        void eat();    
 }
 
-public class animal implements Innerexofinterf {
+public class animal implements example {
     public void sleep() {
         System.out.println("12 Hours");
     }
@@ -16,7 +16,7 @@ public class animal implements Innerexofinterf {
         System.out.println("Hunting");
     }
 }
-class Human implements Innerexofinterf{
+class Human implements example{
     public void sleep() {
         System.out.println(" 8 Hours");
     }
