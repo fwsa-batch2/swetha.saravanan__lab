@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "Java",
+        "JDBC"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/swetham/eclipse-workspace/Connectorj/mysql-connector-java-8.0.29/mysql-connector-java-8.0.29.jar"
+    ]
+}

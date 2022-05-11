@@ -32,5 +32,8 @@ public class multipleih implements no3 {
         obj.statement1();
         obj.statement2();
         obj.statement3();
+        animal obj1 = new animal();
+        no3 e = obj1.sleep();
+        System.out.println(e);
     }
 }
