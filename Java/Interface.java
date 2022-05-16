@@ -11,8 +11,12 @@ public class Interface implements example{
         System.out.println("30km/h");
         
     }
+    public static void eat() {
+        System.out.println("meat");
+    }
     public static void main(String[] args) {
         example obj = new Interface();
+        eat();
         obj.sleep();
         obj.run();    
     }

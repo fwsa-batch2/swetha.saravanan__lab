@@ -1,21 +1,16 @@
 package exception;
-import java.util.Scanner;
 public class exception {
     public static void main(String[] args) {
-        System.out.println("Enter your age :");
-        Scanner scan = new Scanner(System.in);
-        int no=scan.nextInt();
 
         try {
-          if(no<18){
-          System.out.println("You are Eligible");
-          }
-
+         int[] num ={1,2,3};
+         System.out.println(num[10]);
         
         }
         catch(Exception e) {
             System.out.println("You are not Eligible");
+            e.printStackTrace();
         }
-        scan.close();
+
     }
 }
