@@ -5,7 +5,7 @@ package concepts;
 }
 
 public class animal implements example {
-    public void sleep() {
+    public no3 sleep() {
         System.out.println("12 Hours");
     }
     public void eat() {
