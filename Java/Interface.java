@@ -1,4 +1,9 @@
-public class Interface implements example{
+class Swetha  {
+    public void child() {
+        System.out.println("Swetha is an innocent girl");
+    }
+}
+public class Interface extends Swetha implements example{
 
     @Override
     public void sleep() {
@@ -18,11 +23,14 @@ public class Interface implements example{
         example obj = new Interface();
         eat();
         obj.sleep();
-        obj.run();    
+        obj.run();  
+        obj.child() ;
     }
     
 }
+
 interface example {
     void sleep();
     void run();
+    void child();
 }

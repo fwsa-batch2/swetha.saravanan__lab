@@ -10,7 +10,7 @@ public class Constructorchain {
     }
     Constructorchain(String name , int x) {
         System.out.println("My name is " +name);
-        System.out.println("I am Double Parametrized Constructor");
+        System.out.println("I am Double Parametrized Constructor"+x);
     }
     public static void main(String[] args) {
         new Constructorchain();
