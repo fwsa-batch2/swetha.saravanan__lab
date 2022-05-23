@@ -4,7 +4,7 @@ package concepts;
 class Answer {
     public static void main(String[] args) {
         riding.area();
-        overloading.area();
+        loading.area();
     }
 }
 public class riding {
@@ -13,7 +13,7 @@ public class riding {
         return 0;
     }
 }
-class overloading extends riding {
+class loading extends riding {
     static int area() {
         System.out.println("Same method name but different parameters");
         return 0;

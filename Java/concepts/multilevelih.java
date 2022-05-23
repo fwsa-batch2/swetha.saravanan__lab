@@ -16,8 +16,8 @@ class third extends secondary {
     }
     public static void main(String[] args) {
         third obj=new third();
-        obj.c();
-        obj.python();
         obj.java();
+        obj.python();
+        obj.c();
     }
 }

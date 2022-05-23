@@ -5,8 +5,10 @@ interface no1 {
 interface no2 {
     void statement2();
 }
-interface no3 extends no1,no2 {
+interface no3 extends first, second {
     void statement3();
+
+    void third();
 }
 public class multipleih implements no3 {
 

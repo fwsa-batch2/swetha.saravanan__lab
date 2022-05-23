@@ -1,11 +1,11 @@
 package concepts;
-interface no1 {
+interface first {
     void first();
 }
-interface no2 {
+interface second {
     void second();
 }
-interface no3 extends no1, no2 {
+interface fourth extends first, second {
     void third();
 }
 
@@ -18,6 +18,11 @@ public class hybrid implements no3{
     public void second() {
         System.out.println("I am the second statement");
         
+    }
+
+    @Override
+    public void statement3() {
+
     }
 
     @Override

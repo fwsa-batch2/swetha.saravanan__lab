@@ -1,4 +1,4 @@
-package concepts;
+package Threading;
 import java.lang.Thread;
 public class thread  implements Runnable {
     public void run() {
