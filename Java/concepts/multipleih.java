@@ -5,10 +5,18 @@ interface no1 {
 interface no2 {
     void statement2();
 }
-interface no3 extends first, second {
+interface no3 extends no1, no2 {
+    void statement1();
+
+    void statement2();
+
     void statement3();
 
     void third();
+
+    void first();
+
+    void second();
 }
 public class multipleih implements no3 {
 
@@ -29,6 +37,12 @@ public class multipleih implements no3 {
         System.out.println("There will be more than parents");
         
     }
+
+    @Override
+    public void third() {
+
+    }
+
     public static void main(String[] args) {
         multipleih obj=new multipleih();
         obj.statement1();
@@ -37,5 +51,15 @@ public class multipleih implements no3 {
         animal obj1 = new animal();
         no3 e = obj1.sleep();
         System.out.println(e);
+    }
+
+    @Override
+    public void first() {
+
+    }
+
+    @Override
+    public void second() {
+
     }
 }

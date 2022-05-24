@@ -1,12 +1,13 @@
 package concepts;
  interface example {
-       void sleep();
+       no3 sleep();
        void eat();    
 }
 
 public class animal implements example {
     public no3 sleep() {
         System.out.println("12 Hours");
+        return null;
     }
     public void eat() {
         System.out.println("Meat");
@@ -17,8 +18,9 @@ public class animal implements example {
    
 }
 class Human implements example{
-    public void sleep() {
+    public no3 sleep() {
         System.out.println(" 8 Hours");
+        return null;
     }
     public void eat() {
         System.out.println("Natural foods");
