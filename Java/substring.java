@@ -1,24 +1,14 @@
 import java.util.Scanner;
-import java.util.Arrays;
 public class substring {
 
     public static String getSmallestAndLargest(String s, int k) {
-        char[] arr = s.toCharArray();
-        System.out.println(arr);
-        Arrays.sort(arr);
-        System.out.println(arr);
-        int ans =arr.length%k;
-       
-        if(ans!=0) {
-            for(int i=0;i<arr.length; ){
-               String str=s.substring(i,i+k);
-               System.out.println(str);
-            }
-
-        }
-        
-       return null;
-       
+        String smallest = s.substring(0,k);
+        String largest  = "";
+        for(int i=0;i<s.length()-k+1;i++){
+        if(s.substring(i,i+k).compareTo(smallest)<0) smallest = s.substring(i,i+k);
+        if(s.substring(i,i+k).compareTo(largest)>0) largest = s.substring(i,i+k);
+        }    
+        return smallest + "\n" + largest;
     }
 
     public static void main(String[] args) {

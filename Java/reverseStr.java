@@ -3,17 +3,15 @@ import java.util.Scanner;
 public class reverseStr {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
-        System.out.println("Enter a word to reverse :");
-        String str=input.next();
-        int length=str.length();
-        System.out.println(length);
-        String reverse="";
-        char ch;
-        for(int i=0; i<length; i++) {
-            ch=str.charAt(i);
-            reverse=ch+reverse;
+        String str = input.next();
+        String str1=new StringBuilder(str).reverse().toString();
+        if(str1.equals(str)) {
+            System.out.println("Yes");
         }
-        System.out.println("Reversed String :" +reverse);
+        else {
+            System.out.println("No");
+        }
+        
         input.close();
     }
 }
