@@ -9,7 +9,7 @@ public class Tokens {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
         // StringTokenizer obj=new StringTokenizer(s);
-        Pattern p=Pattern.compile("[[!,?._'@\\s]+]");
+        Pattern p=Pattern.compile("[!,?._'@\\s]+]");
         Matcher m=p.matcher(s);
         while(m.find()){
             System.out.println(m.group());
