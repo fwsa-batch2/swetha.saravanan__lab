@@ -7,7 +7,7 @@ class SAMPLE
     puts "Name #{@@name} , Age #{@Age} , Id #{-id} , Ins #{ins} , Marks #{$marks} "
     def method
         @@name="Swetha"
-        # @Age =17
+        @Age =17
         -id=40
         ins="FWSA"
         $mark =100

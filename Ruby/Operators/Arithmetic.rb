@@ -26,13 +26,13 @@ class ARITHMETIC
     end
 end
 print "Enter first number :"
-$a = gets.chomp.to_i
+a = gets.to_i
 print "Enter second number :"
-$b = gets.chomp.to_i
+b = gets.to_i
 obj = ARITHMETIC.new
-obj.add($a,$b)
-obj.sub($a,$b)
-obj.multiply($a,$b)
-obj.divide($a,$b)
-obj.modulus($a,$b)
-obj.exponent($a,$b)
+obj.add(a,b)
+obj.sub(a,b)
+obj.multiply(a,b)
+obj.divide(a,b)
+obj.modulus(a,b)
+obj.exponent(a,b)
