@@ -1,7 +1,7 @@
 class LOGICAL 
     def logical(a,b)
-        puts "LOGICAL AND : #{a>0 AND b>0}"
-        puts "LOGICAL OR : #{a>0 OR b>0}"
+        # puts "LOGICAL AND : #{a>0andb>0}"
+        # puts "LOGICAL OR : #{a>0orb>0}"
         puts "LOGICAL NOT : #{NOT(a<0 && b<0)}"
         puts "LOGICAL && : #{a>0 &&b<0}"
         puts "LOGICAL || : #{a>0 ||b<0}"
@@ -9,6 +9,7 @@ class LOGICAL
         
     end
 end
+$a=10
 print "Enter first number : "
 a=gets.chomp.to_i
 print "Enter second number : "

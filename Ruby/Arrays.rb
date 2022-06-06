@@ -6,3 +6,4 @@ for i in 0...num do
     arr.push(i)
 end
 puts "#{arr}"
+arr << 11
