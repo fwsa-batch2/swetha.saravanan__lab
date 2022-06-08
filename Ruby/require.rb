@@ -1,3 +1,2 @@
-load './Sample.rb'
-object = SAMPLE.new
-object.method
+require './Sample.rb'
+puts $marks
