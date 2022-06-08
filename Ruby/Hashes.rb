@@ -11,4 +11,3 @@ end
 student.each_value do |values|
     puts values
 end
-student.each_index do |index|
