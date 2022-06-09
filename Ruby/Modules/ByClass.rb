@@ -3,3 +3,5 @@ class EXAMPLE
       puts "Example"
     end
 end
+puts "Hello  world"
+puts "Hello world"
