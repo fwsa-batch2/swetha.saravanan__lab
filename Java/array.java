@@ -20,8 +20,12 @@ public class array {
         // Arrays.sort(array);
         // System.out.println("Smallest element :"+array[0]);
         // System.out.println("Largest element :" +array[array.length-1]);
+        int[] a={1,2,3,4};
+        for(int i=a.length-1; i<=a.length-1; i--){
+            System.out.println(a[i]);
+        }
 
-
+ 
     }
 
     
