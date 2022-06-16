@@ -7,4 +7,10 @@ for i in 0...names.length
   name.push(names[i][j] + " " + names[i][j + 1])
   # p name
 end
+# a = [1,2,3,4]
+# p a
 p name
+# puts a
+puts name
+print name
+# print names.flatten!

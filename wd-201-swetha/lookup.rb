@@ -9,14 +9,19 @@ def get_command_line_argument
   end
   ARGV.first
 end
-
+def parse_dns(dns_raw)
+   for i in dns_raw do
+     if(i[0]=="#")
+   end
+end
 # `domain` contains the domain name we have to look up.
-domain = get_command_line_argument
+# domain = get_command_line_argument
 
 # File.readlines reads a file and returns an
 # array of string, where each element is a line
 # https://www.rubydoc.info/stdlib/core/IO:readlines
 dns_raw = File.readlines("zone")
+puts dns_raw
 
 # ..
 # ..
@@ -27,7 +32,7 @@ dns_raw = File.readlines("zone")
 # To complete the assignment, implement `parse_dns` and `resolve`.
 # Remember to implement them above this line since in Ruby
 # you can invoke a function only after it is defined.
-dns_records = parse_dns(dns_raw)
-lookup_chain = [domain]
-lookup_chain = resolve(dns_records, lookup_chain, domain)
-puts lookup_chain.join(" => ")
+# dns_records = parse_dns(dns_raw)
+# lookup_chain = [domain]
+# lookup_chain = resolve(dns_records, lookup_chain, domain)
+# puts lookup_chain.join(" => ")
