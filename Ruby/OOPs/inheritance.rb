@@ -1,8 +1,6 @@
 class SAMPLE
     def initialize
-        puts "Swetha is a good girl"
-    end
-    def name(name)
+        puts " Swetham is a boy "
         puts name
     end
 end

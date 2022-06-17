@@ -8,6 +8,8 @@ library = {}
 # library.each do |author, books|
 #   puts "#{author.capitalize} wrote the books #{books.join(', ')}"
 # end
+
+#check
 books = ["Design as Art", "Anathem", "Shogun"]
 authors = ["Bruno Munari", "Neal Stephenson", "James Clavell"]
 for i in 0...books.length
