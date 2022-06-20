@@ -9,15 +9,15 @@ class Todo
   end
   def overdue?
     date = Date.today
-    return (@date>date)? true : false
+    return (@date<date)? true : false
   end
   def due_later?
     date = Date.today
-    return (@date<date)? true : false
+    return (@date>date)? true : false
   end
   def due_date?
     date = Date.today
-    return (@date=date)? true : false
+    return (@date==date)? true : false
   end
   # def to_displayable_string
   #   todos_list.due_today.to_displayable_list
@@ -30,21 +30,21 @@ class TodosList
   end
   def add (x)
     @todos.push(x)
-  end  
+  end
   def overdue
     TodosList.new(@todos.filter { |todo| todo.overdue? })
-  end  
+  end
 
-  def due_later 
+  def due_later
     TodosList.new(@todos.filter { |todo| todo.due_later? })
   end
   def due_today
-    TodosList.new(@todos.filter { |todo| todo.due_date? })  
+    TodosList.new(@todos.filter { |todo| todo.due_date? })
   end
 
   def to_displayable_list
     todo_text=[]
-    @todos.each do |x| 
+    @todos.each do |x|
     ans = (x.ans) ? "[X]" : "[ ]"
     todo_text.push("#{ans} #{x.text} #{x.date}")
     end
@@ -53,7 +53,7 @@ class TodosList
 end
 
 date = Date.today
-puts date
+# puts date
 
 todos = [
   { text: "Submit assignment", due_date: date - 1, completed: false },
@@ -61,12 +61,12 @@ todos = [
   { text: "File taxes", due_date: date + 1, completed: false },
   { text: "Call Acme Corp.", due_date: date + 1, completed: false },
 ]
-puts todos
+# puts todos
 
 todos = todos.map { |todo|
   Todo.new(todo[:text], todo[:due_date], todo[:completed])
 }
-puts todos
+# puts todos
 
 todos_list = TodosList.new(todos)
 
