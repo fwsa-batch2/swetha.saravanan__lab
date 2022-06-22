@@ -19,18 +19,22 @@ class Todo
     date = Date.today
     return (@date==date)? true : false
   end
-  # def to_displayable_string
-  #   todos_list.due_today.to_displayable_list
-  # end
+  def to_displayable_string
+    ans = (@ans)? "[X]" : "[]"
+    return "#{ans} #{@text} #{@date}"
+
+  end
 end
 
 class TodosList
   def initialize(todos)
     @todos = todos
   end
+
   def add (x)
     @todos.push(x)
   end
+
   def overdue
     TodosList.new(@todos.filter { |todo| todo.overdue? })
   end
@@ -38,6 +42,7 @@ class TodosList
   def due_later
     TodosList.new(@todos.filter { |todo| todo.due_later? })
   end
+
   def due_today
     TodosList.new(@todos.filter { |todo| todo.due_date? })
   end
@@ -45,11 +50,17 @@ class TodosList
   def to_displayable_list
     todo_text=[]
     @todos.each do |x|
-    ans = (x.ans) ? "[X]" : "[ ]"
-    todo_text.push("#{ans} #{x.text} #{x.date}")
+    date = Date.today
+    if x.date == date
+      todo_text.push("#{x.to_displayable_string}")
+    else
+      todo_text.push("#{x.to_displayable_string}")
     end
+  end
    return todo_text
   end
+
+
 end
 
 date = Date.today
@@ -85,3 +96,4 @@ puts "\n\n"
 puts "Due Later\n"
 puts todos_list.due_later.to_displayable_list
 puts "\n\n"
+
