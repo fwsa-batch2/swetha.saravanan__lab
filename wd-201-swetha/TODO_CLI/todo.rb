@@ -1,4 +1,5 @@
 require 'active_record'
+
 class Todo < ActiveRecord::Base
   def due_today?
     due_date == Date.today
